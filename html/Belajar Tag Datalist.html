@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Datalist</title>
+</head>
+<body>
+    <form action="">
+        <label for="browser">Choose Your Browser :</label>
+        <input type="text" list="browser" placeholder="Type or Choose..">
+        <datalist id="browser">
+            <option value="Google">Google</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Edge">Edge</option>
+        </datalist>
+    <br>
+    <br>
+        <label for="number">Choose A Number</label>
+        <input type="number" list="number" min="1" max="5" step="1">
+        <datalist id="number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </datalist>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
