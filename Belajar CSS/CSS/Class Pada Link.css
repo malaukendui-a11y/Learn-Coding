@@ -1,0 +1,20 @@
+.Navigasi:link {
+    color: aqua;
+}
+.Navigasi:visited {
+    color: brown;
+}
+.Navigasi:hover {
+    background-color: blue;
+    color: bisque;
+}
+.Navigasi:active {
+    color: blueviolet;
+}
+ul li a:link {
+    color: red;
+}
+ul li a:hover {
+    background-color: chocolate;
+    color: antiquewhite;
+}
