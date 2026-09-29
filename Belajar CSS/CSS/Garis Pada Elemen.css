@@ -1,0 +1,10 @@
+hr {
+    border-width: 5px;
+    border-style: solid;
+    border-color: aqua;
+}
+.lv {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}

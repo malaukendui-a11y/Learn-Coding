@@ -1,0 +1,17 @@
+body {
+    /* background-color: aqua; */
+    background-image: url(../gambar/bg3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    background-attachment: fixed;
+}
+.jumbutroon {
+    width: 700px;
+    height: 300px;
+    border: 3px solid black;
+    margin: auto;
+    background-image: url(../gambar/bg2.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}

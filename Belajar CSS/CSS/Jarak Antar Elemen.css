@@ -1,0 +1,19 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+p {
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+.container {
+    background-color: blueviolet;
+    width: 250px;
+    height: 800px;
+    margin: auto;
+    padding: 20px;
+}
