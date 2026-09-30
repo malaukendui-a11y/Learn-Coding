@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aqua;
+}
+.main {
+    width: 900px;
+    margin: 30px auto;
+}
+article img {
+    width: 300px;
+    float: left;
+    /*margin-top: 10px;
+    margin-right: 20px;*/
+    margin: 10px 20px 0px 0px;
+}
+.clear {
+    clear: left;
+}
+.clear2 {
+    clear: left;
+}
+article h2 {
+    margin-top: 30px;
+}
+hr {
+    border: 3px solid black;
+    margin-top: 10px;
+}
+article p {
+    line-height: 28px;
+    text-align: justify;
+}
