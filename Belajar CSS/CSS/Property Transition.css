@@ -1,0 +1,16 @@
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin: 100px auto;
+    /* transition-duration: 1s;
+    transition-property: all;
+    transition-delay: 0.9s;
+    transition-timing-function: ease-in-out; */
+    /* transition: 1s all 0.9s ease-in-out; */
+    transition: 1s;
+}
+.kotak:hover {
+    transform: rotate(45deg);
+    margin-left: 200px;
+}
