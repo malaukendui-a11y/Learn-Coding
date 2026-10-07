@@ -1,0 +1,25 @@
+:root {
+    --var-warna-merah:#e00909;
+    --var-warna-biru:#4b05bb;
+    --var-margin-top:50px;
+}
+
+.container {
+    width: 400px;
+    border: 2px solid black;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    color: var(--var-warna-biru);
+    margin-top: var(--var-margin-top);
+}
+
+p {
+    color: var(--var-warna-merah);
+}
+
+span {
+    background-color: var(--var-warna-biru);
+}
