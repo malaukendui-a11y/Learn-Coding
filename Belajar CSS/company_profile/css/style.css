@@ -1,0 +1,298 @@
+:root {
+    --peach: #ffdab9;
+    --dark: #2f4f4f;
+    --cyan: #e0ffff;
+    --brown: #3e2723;
+    --green: #25d366; 
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* NAVIGASI CONTAINER DEKSTOP */
+#nav-container {
+    background-color: var(--cyan);
+    position: sticky;
+    top: 0px;
+}
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+.nav-flex label, #hamburger {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    color: var(--dark);
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--peach);
+    transition: all 0.3s;
+}
+.nav-brand h2 {
+    margin: 14px 0 0 10px;
+    color: var(--dark);
+}
+
+/* Hero Section */
+#hero-container {
+    background-image: url(../image/hero.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+.text {
+    text-align: center;
+    color: var(--cyan);
+    font-size: 20px;
+}
+.button {
+    text-decoration: none;
+    color: var(--cyan);
+    display: inline-block;
+    margin-top: 180px;
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: var(--dark);
+    color: var(--cyan);
+    transition: 0.8s;
+}
+.fab {
+    font-size: 18px;
+}
+
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+/* Rangga Suka Key */
+#about h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+#about .about-deskripsi {
+    text-align: center;
+    color: var(--dark);
+}
+.about-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+}
+.about-image,about-text {
+    width: 50%;
+    margin: 14px;
+}
+.about-image img {
+    width: 100%;
+    object-fit: cover;
+}
+hr {
+    border: 2px solid black;
+}
+
+/* Rangga Berak */
+#services h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+#services .services-deskripsi {
+    text-align: center;
+    color: var(--dark);
+}
+.services-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.services-items {
+    width: 25%;
+    text-align: center;
+    padding: 20px 10px;
+}
+.services-items .fas {
+    color: gold;
+}
+
+/* Catalog */
+#catalog h1 {
+    text-align: center;
+    color: var(--dark);
+    margin-top: 80px;
+}
+#catalog .catalog-deskripsi {
+    text-align: center;
+    color: var(--dark);
+}
+.catalog-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+.catalog-items {
+    width: 25%;
+    text-align: center;
+    padding: 20px 10px;
+}
+.catalog-items img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.catalog-items h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--dark);
+}
+.catalog-items p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: var(--dark);
+}
+.price-chat-container {
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    padding: 5px;
+}
+.price-harga span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--dark);
+}
+.chat-button button {
+    background-color: var(--green);
+    color: var(--cyan);
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.chat-button button:hover {
+    background-color: var(--dark);
+    color: var(--cyan);
+}
+
+
+/* Versi Tablet/ */
+@media screen and (max-width: 768px) {
+    /* Tampilkan Icon Hamburger */
+    #nav-container .nav-flex label {
+        display: inline-block;
+        color: var(--dark);
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px ;
+        cursor: pointer;
+    }
+    /* Susun Ulang Menu Menjadi Vertikal */
+    #nav-container .nav-flex {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    nav ul li a {
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px;
+        height: auto;
+    }
+    /* Pindahkan Posisi Brand Ke-Kanan, dan Perkecil */
+    .nav-brand h2 {
+        position: absolute;
+        right: 20px;
+    }
+    /* Untuk Menampilkan/Menyembunyikan Menu */
+    #nav-container nav {
+        display: none;
+    }
+    #nav-container .nav-flex input:checked ~ nav {
+        display: flex;
+    }
+
+    /* Hero Photo */
+     #hero-container {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    /* Rangga Suka Key */
+    .about-flex {
+        flex-direction: column;
+    }
+    .about-image,.about-text {
+        width: auto;
+    }
+
+    /* Prestasi Rangga */
+    .services-items {
+        width: 50%;
+    }
+
+    /* Catalog */
+    .catalog-items {
+        width: 50%;
+    }
+}
+
+
+/* Versi SmartPhone */
+@media screen and (max-width:481px) {
+    /* Service */
+    .services-items {
+        width: 100%;
+    }
+
+    /* Catalog */
+    .catalog-items {
+        width: 100%;
+    }
+}
