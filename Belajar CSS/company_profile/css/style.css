@@ -213,6 +213,33 @@ hr {
     color: var(--cyan);
 }
 
+/* Portfolio */
+#portfolio h1 {
+    text-align: center;
+    color: var(--dark);
+    margin-top: 80px;
+}
+#portfolio .portfolio-deskripsi {
+    text-align: center;
+    color: var(--dark);
+}
+.portfolio-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px auto;
+}
+.portfolio-items {
+    width: 25%;
+    padding: 10px;
+}
+.portfolio-items img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
 
 /* Versi Tablet/ */
 @media screen and (max-width: 768px) {
@@ -281,6 +308,11 @@ hr {
     .catalog-items {
         width: 50%;
     }
+
+    /* Rangga Dimarahin emaknya */
+    .portfolio-items {
+        width: 30%;
+    }
 }
 
 
@@ -294,5 +326,10 @@ hr {
     /* Catalog */
     .catalog-items {
         width: 100%;
+    }
+
+    /* Rangga Dimarahin Emaknya */
+    .portfolio-items {
+        width: 50%;
     }
 }
