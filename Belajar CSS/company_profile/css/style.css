@@ -13,6 +13,9 @@ html, body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 
 /* NAVIGASI CONTAINER DEKSTOP */
@@ -20,6 +23,7 @@ html, body {
     background-color: var(--cyan);
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 .nav-flex {
     display: flex;
@@ -233,11 +237,127 @@ hr {
 .portfolio-items {
     width: 25%;
     padding: 10px;
+    overflow: hidden;
 }
 .portfolio-items img {
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
+}
+.portfolio-items img:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+    transition: transform 0.5s ease ,opacity 0.5s ease;
+    object-fit: cover;
+}
+
+/* Contact Rangga */
+#contact h1 {
+    margin-top: 80px;
+    color: var(--dark);
+    text-align: center;
+}
+.contact-deskripsi {
+    text-align: center;
+    color: var(--dark);
+}
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 100%;
+}
+.map {
+    width: 60%;
+}
+.map h3 {
+    text-align: center;
+    color: var(--dark);
+}
+.map iframe {
+    border-radius: 10px;
+}
+.social-media {
+    width: 40%;
+    padding: 10px;
+}
+.social-media h3 {
+    text-align: center;
+    color: var(--dark);
+}
+.social-icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: var(--dark);
+    color: var(--cyan);
+    padding: 5px;
+    border-radius: 15px;
+}
+.facebook {
+    background-color: #3b5997;
+    color: white;
+}
+.instagram {
+    background-color: cadetblue;
+    color: white;
+}
+.twitter {
+    background-color: red;
+    color: white;
+}
+.linkedin {
+    background-color: #3e2723;
+    color: white;
+}
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+/* Footer */
+.footer-container {
+    margin-top: 60px;
+    color: var(--dark);
+    background-color: var(--cyan);
+    padding: 30px 5px;
+}
+.footer-container a {
+    text-decoration: none;
+    color: var(--dark);
+}
+.footer-container a:hover {
+    text-decoration: underline;
+}
+.footer-flex {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.footer-flex section {
+    width: 25%;
+    text-align: center;
+}
+.footer-flex section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer h3 {
+    margin-top: 0;
+}
+.footer-copy-right {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px;
+}
+.footer-copy-right a:hover {
+    text-decoration: none;
 }
 
 
@@ -313,6 +433,19 @@ hr {
     .portfolio-items {
         width: 30%;
     }
+
+    /* Contact */
+    .contact-flex {
+        flex-direction: column;
+    }
+    .map,.social-media {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-flex section {
+        width: 48%;
+    }
 }
 
 
@@ -331,5 +464,11 @@ hr {
     /* Rangga Dimarahin Emaknya */
     .portfolio-items {
         width: 50%;
+    }
+
+    /* Footer */
+    .footer-flex section {
+        width: 100%;
+        margin-top: 10px;
     }
 }
