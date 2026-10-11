@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Atribut JavaScript</title>
+</head>
+<body>
+    <img id="gambar" src="gambar2.jpeg">
+    <br>
+    <br>
+    <button onclick="ubahGambar()">Ubah Gambar</button>
+
+    <script>
+        function ubahGambar() {
+            let gambar = document.getElementById("gambar");
+            gambar.setAttribute("src", "gambar1.jpeg");
+        }
+        
+    </script>
+</body>
+</html>

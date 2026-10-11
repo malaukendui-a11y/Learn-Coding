@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus Function</title>
+</head>
+<body>
+    <h1 id="judul">Judul Saat Ini</h1>
+    <button onclick="ubahJudul()">Ubah Judul</button>
+
+    <script>
+        function ubahJudul() {
+            let judulBaru = prompt("Masukan Judul Baru");
+            document.getElementById("judul").innerHTML = judulBaru;
+        }
+    </script>
+</body>
+</html>

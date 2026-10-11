@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Style CSS Melalui JavaScript</title>
+</head>
+<body>
+    <section id="main">
+        <h1 id="judul">Kelas Komputer Online</h1>
+        <p class="paragraf">Paragraf 1</p>
+        <p class="paragraf">Paragraf 2</p>
+    </section>
+
+    <script>
+        let elemenJudul = document.getElementById("judul");
+        elemenJudul.style.color = "red";
+
+        let elemenParagraf = document.getElementsByClassName("paragraf");
+        elemenParagraf[0].style.fontSize = "34px";
+        elemenParagraf[1].style.color = "blue";
+    </script>
+</body>
+</html>
