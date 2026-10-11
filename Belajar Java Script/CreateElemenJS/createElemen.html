@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElemen</title>
+</head>
+<body>
+    <seciton id="about"></seciton>
+    <button onclick="tambahData()">Tambah Data</button>
+
+    <script>
+
+        function tambahData() {
+            let aboutSection = document.getElementById("about");
+            let heading = document.createElement("h2");
+            heading.textContent = "Tentang Kami";
+
+            let paragraf = document.createElement("p");
+            paragraf.textContent = "Aku adalah Polisi Dek Asoy Banget Nih.";
+
+        aboutSection.append(heading, paragraf);  
+        }
+
+    </script>
+</body>
+</html>

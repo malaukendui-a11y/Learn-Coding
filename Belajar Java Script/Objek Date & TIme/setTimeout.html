@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id="hasil">Silahkan tunggu beberapa detik...</p>
+
+    <script>
+        let hasil = document.getElementById("hasil")
+
+        function tampilkanPesan() {
+            hasil.textContent = "Waktu Habis";
+        }
+
+        setTimeout(tampilkanPesan, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: auto;
+        }
+
+        /* Kelas Untuk Menyembunyikan Elemen */
+        .hidden {
+            display: none;
+        }
+
+        /* Gaya tombol Selengkapnya */
+        .read-more-btn {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <article>
+            <h2>Judul Artikel</h2>
+
+            <!-- Paragraf Awal Artikel -->
+             <p>
+                Ini adalah bagian awal dari artikel yang langsung terlihat oleh pembaca.
+                
+                <!-- Bagain Isi Tambahan yang disembunyikan -->
+                <span id="moreText" class="hidden">
+                    Bagian ini disembunyikan pada awalnya. Disini bisa berisi paragraf tambahan yang lebih panjang, penjelasa mendalam, atau lanjutan dari isi artikel utama.
+                </span>
+             </p>
+
+             <!-- Tombol "Selengkapnya" yang bisa diklik -->
+              <span id="readMoreBtn" class="read-more-btn">Selengkapnya</span>
+        </article>
+    </div>
+
+    <script>
+        const moreText = document.getElementById("moreText");
+        const readMoreBtn = document.getElementById("readMoreBtn");
+
+        function tampilkan() {
+            if(moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                readMoreBtn.textContent = "Sembunyikan";
+            } else {
+                moreText.classList.add("hidden");
+                readMoreBtn.textContent = "Selengkapnya";
+            }
+        };
+
+        readMoreBtn.addEventListener("click", tampilkan);
+    </script>
+</body>
+
+</html>

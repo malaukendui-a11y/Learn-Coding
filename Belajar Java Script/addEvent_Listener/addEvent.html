@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEvent Listener</title>
+</head>
+<body>
+    <!-- <button onclick="ubahTeks()">Klik Saya</button>
+    <p id="pesan">Teks Awal</p>
+    <script>
+        // Event Handling
+        // Peristiwa yang terjadi pada elemen HTML, yaitu : Ketika tombol diklik, pergerakan mouse, atau penekanan tombol pada keyboard
+
+        function ubahTeks() {
+            let ubahTeks = document.getElementById("pesan");
+            ubahTeks.innerHTML = "Teks telah berubah!";
+        }
+    </script> -->
+
+    <button id="tombolUbahTeks">Klik Saya</button>
+    <p id="teks">Teks Awal</p>
+
+    <script>
+        // ambil elemen
+        let tombolUbahTeks = document.getElementById("tombolUbahTeks");
+        let paragraf = document.getElementById("teks");
+
+        // function
+        function ubahTeks() {
+            paragraf.innerHTML = "Teks telah berubah";
+        }
+        // event listener
+        tombolUbahTeks.addEventListener("click", ubahTeks);
+    </script>
+
+</body>
+</html>

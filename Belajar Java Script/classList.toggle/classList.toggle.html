@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class list toggle</title>
+    <style>
+        /* Studi Kasus 1 */
+        p {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Studi Kasus 1 -->
+    <p id="teks">Selamat Datang</p>
+    <button onclick="tampilkan()">Sembunyikan/Tampilkan</button>
+
+    <script>
+        // Studi Kasus 1
+        function tampilkan() {
+            let paragraf = document.getElementById("teks");
+            paragraf.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Sisa Hari</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="output"></p>
+    
+    <script>
+        let output = document.getElementById("output");
+
+        // Tentukan Tanggal Target
+        let target = new Date ("oct 30, 2026");
+
+        // Ambil Waktu Sekarang
+        let sekarang = new Date();
+
+        let selisih = target.getTime() - sekarang.getTime();
+
+        // Konversi mildetik ke sisa hari
+        let sisaHari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+
+        output.textContent = `${sisaHari} hari lagi`;
+    </script>
+</body>
+
+</html>

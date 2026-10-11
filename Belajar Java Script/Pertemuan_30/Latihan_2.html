@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>Form Input</h2>
+
+    <!-- Form dengan input nama dan alamat -->
+    <form>
+        <input type="text" id="nama" placeholder="Masukan Nama">
+        <br><br>
+        <input type="text" id="alamat" placeholder="Masukan Alamat">
+    </form>
+
+    <!-- Output untuk menampilkan hasil input -->
+    <h3>Hasil Input</h3>
+    <p>Nama : <span id="output-nama"></span></p>
+    <p>Alamat : <span id="output-alamat"></span></p>
+
+    <script>
+        // Ambil Elemen input dan output
+        let namaInput = document.getElementById("nama");
+        let alamatInput = document.getElementById("alamat");
+        let namaOutput = document.getElementById("output-nama");
+        let alamatOutput = document.getElementById("output-alamat");
+
+        // Menambahkan evenListener untuk menangani nama
+        namaInput.addEventListener("input", function() {
+            namaOutput.innerText = namaInput.value;
+        });
+        // Menambahkan evenListener untuk menangani alamat
+        alamatInput.addEventListener("input", function() {
+            alamatOutput.innerText = alamatInput.value;
+        });
+    </script>
+</body>
+</html>

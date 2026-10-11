@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Input</title>
+    <style>
+        div {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        input {
+            pad: 20px;
+            width: 200px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="input-text" placeholder="Ketik Sesuatu...">
+        <p id="output-text"></p>
+    </div>
+    <script>
+        let inputText = document.getElementById("input-text");
+        let outputText = document.getElementById("output-text");
+
+        function tampilkanText() {
+            outputText.innerText = inputText.value; 
+        }
+        inputText.addEventListener("input", tampilkanText);
+    </script>
+</body>
+
+</html>

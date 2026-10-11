@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objek Date</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="hasil"></p>
+
+    <script>
+        let waktuSekarang = new Date();
+
+        let tahun = waktuSekarang.getFullYear();
+        let bulan = waktuSekarang.getMonth();
+        let tanggal = waktuSekarang.getDate();
+        let jam = waktuSekarang.getHours();
+        let menit = waktuSekarang.getMinutes();
+        let detik = waktuSekarang.getSeconds();
+
+        let hasil = document.getElementById("hasil");
+        hasil.textContent = `${tanggal}-${bulan}-${tahun}-${jam}:${menit}:${detik}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Bilangan Ganjil dan Genap</title>
+</head>
+
+<body>
+    <input type="text" id="angka" placeholder="Masukan Angka">
+    <button id="cek">Cek Angka</button>    
+
+    <p id="hasil"></p>
+
+    <script>
+        function cekAngka() {
+            let nilai = Number(document.getElementById("angka").value);
+            let hasil = document.getElementById("hasil");
+
+            if (isNaN(nilai)) {
+                hasil.textContent = "Masukan Angka";
+            } else if (nilai % 2 === 0) {
+                hasil.textContent = "Angka tersebut adalah Genap";
+            } else {
+                hasil.textContent = "Angka tersebut adalah Ganjil";
+            }
+        }
+
+        document.getElementById("cek").addEventListener("click", cekAngka);
+    </script>
+</body>
+
+</html>
