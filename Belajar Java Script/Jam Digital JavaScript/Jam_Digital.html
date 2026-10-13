@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam Digital</title>
+    <style>
+        body {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #jam {
+            color: aquamarine;
+            font-size: 60px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Format Awal Jam -->
+    <div id="jam">00:00:00</div>    
+
+    <script>
+        // Ambil Id nya ingin di ubah
+        let hasil = document.getElementById("jam");
+
+        // Buat Function nya
+        function tampilkanJam() {
+            let sekarang = new Date();
+            let jam = sekarang.getHours();
+            let menit = sekarang.getMinutes();
+            let detik = sekarang.getSeconds();
+
+            // Logic IF Else nya
+            if (jam < 10) {
+                jam = "0" + jam;
+            } else {
+                jam = jam;
+            }
+
+            if (jam < 10) {
+                menit = "0" + menit;
+            } else {
+                menit = menit;
+            }
+
+            if (detik < 10) {
+                detik = "0" + detik;
+            } else {
+                detik = detik;
+            }
+
+            hasil.innerText = `${jam}:${menit}:${detik}`;
+        }
+
+        setInterval(tampilkanJam, 1000);
+        tampilkanJam();
+    </script>
+</body>
+
+</html>

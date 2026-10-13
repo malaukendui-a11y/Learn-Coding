@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tebak Anga</title>
+</head>
+
+<body>
+    
+    <script>
+        // Membuat Angka Acak antar 1 - 10
+        let angkaBenar = Math.floor(Math.random() * 10) +1;
+
+        // Meminta input dari user melalui kotak prompt
+        let tebakan = prompt("Tebak Angka 1 - 10");
+        
+        // Mengecek apakah input user sama dengan angka acak
+        if (parseInt(tebakan) === angkaBenar) {
+            alert("Benar");     
+        } else {
+            alert(`Salah, Jawabannya ${angkaBenar}`);
+        }
+
+    </script>
+</body>
+
+</html>

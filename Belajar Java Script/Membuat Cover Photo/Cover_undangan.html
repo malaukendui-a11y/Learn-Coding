@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Fadlan & Jasmine</title>
+    <style>
+        /* Cover Photo Full Screen */
+        #cover {
+            background: url("contoh_photo.jpeg");
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            z-index: 10;
+        }
+        #bukaBtn {
+            padding: 15px 30px;
+            cursor: pointer;
+            background-color: #fff;
+            border: none;
+            font-size: 18px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-bottom: 160px;
+            box-shadow: rgba(0, 0, 0, 20);
+        }
+        /* konten utama */
+        #konten {
+           position: relative;
+           min-height: 100vh;
+           width: 100%;
+           overflow: hidden;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           padding: 20px;
+           box-sizing: border-box;
+           isolation: isolate;
+        }
+        /* Video Background */
+        .video-background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+        /* Teks diatas Video */
+        .konten-teks {
+            position: relative;
+            color: white;
+            padding: 20px;
+
+            /* Agar TUlisan Mudah DIbaca */
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Undangan dengan Gambar -->
+    <div id="cover">
+        <button id="bukaBtn">Buka Undangan</button>
+    </div>
+
+    <!-- Content Utama -->
+    <div id="konten">
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="konten-teks">
+            <h1>Selamat Datang di Undangan Kami</h1>
+            <p>Undangan ini ditujukan untuk keluarga dan sahabat tercinta</p>
+            <p>Acara : 20 Maret 2026</p>
+            <p>Lokasi : Balai Sarbini, Jakarta Pusat</p>
+        </div>
+    </div>
+
+    <script>
+        let tombol = document.getElementById("bukaBtn");
+        let cover = document.getElementById("cover");
+
+        tombol.addEventListener("click" , function() {
+            cover.style.display = "none";
+        });
+    </script>
+</body>
+</html>
