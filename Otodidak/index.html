@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Form Login With CSS + JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page-shell">
+
+    <section id="welcome-screen" class="welcome-screen" aria-labelledby="welcome-title">
+        <div class="welcome-status">
+            <span>9:30</span>
+            <span aria-hidden="true">▂ ◉ ▰</span>
+</div>
+
+<div class="welcome-brand">
+    <span class="welcome-mark" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+    </span>
+    <span>Track Job</span>
+</div>
+
+<div class="welcome-actions">
+    <h1 id="welcome-title">Welcome Back</h1>
+
+    <button class="welcome-button welcome-button-outline"
+            type="button" data-open-form="login">
+    SIGN IN
+    </button>
+
+    <button class="welcome-button welcome-button-light"
+            type="button" data-open-form="signup">
+    SIGN UP
+    </button>
+</div>
+
+<div class="welcome-social">
+    <p>Login with Social Media</p>
+
+    <div class="social-buttons">
+    <button type="button" class="social-button" data-social="Google"
+            aria-label="Google sign in">G</button>
+    <button type="button" class="social-button" data-social="X"
+            aria-label="X sign in">𝕏</button>
+    <button type="button" class="social-button" data-social="Facebook"
+            aria-label="Facebook sign in">f</button>
+    </div>
+
+    <p id="welcome-feedback" class="welcome-feedback"
+        role="status" aria-live="polite"></p>
+    </div>
+</section>    
+
+        <section id="auth-card" class="auth-card" aria-labelledby="page-heading" hidden>
+            <header class="auth-header">
+                <p class="brand">
+                    <span class="brand-mark" aria-hidden="true">
+                        <i></i><i></i><i></i><i></i>
+                    </span>
+                    Tracking Your Job
+                </p>
+
+                <h1 id="page-heading">
+                    <span id="login-heading">Hello, <br>Sign in!</span>
+                    <span id="signup-heading" hidden>Create Your<br>Account</span>
+                </h1>
+            </header>
+
+            <div class="auth-panel">
+                <form id="login-form" class="auth-form">
+                    <div class="form-field">
+                        <label for="login-email">Gmail</label>
+                        <input
+                            id="login-email"
+                            name="email"
+                            type="text"
+                            inputmode="email"
+                            autocomplete="email"
+                            placeholder="Masukan Email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="login-password">Password</label>
+                        <div class="password-row">
+                            <input 
+                                id="login-password"
+                                name="password"
+                                type="password"
+                                autocomplete="current-password"
+                                placeholder="Masukan Password"
+                                required
+                            >
+                            <button
+                                class="password-toggle"
+                                type="button"
+                                data-password-toggle="login-password"
+                                aria-controls="login-password"
+                                aria-label="Show password"
+                            >Show</button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-options">
+                        <button class="text-button" id="forgot-password" type="button">
+                            Forgot Password?
+                        </button>
+                    </div>
+
+
+                    <button class="submit-button" type="submit">Sign In</button>
+                </form>
+
+                <form id="signup-form" class="auth-form" hidden>
+                    <div class="form-field">
+                        <label for="full-name">Full Name</label>
+                        <input 
+                            id="full-name"
+                            name="fullname"
+                            type="text"
+                            autocomplete="name"
+                            placeholder="Masukan Nama Anda"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="signup-email">Phone or Gmail</label>
+                        <input 
+                            id="signup-email"
+                            name="emailOrPhone"
+                            type="text"
+                            autocomplete="username"
+                            placeholder="Masukan Email"
+                            required    
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="signup-password">Password</label>
+                        <div class="password-row">
+                            <input 
+                                id="signup-password"
+                                name="password"
+                                type="password"
+                                autocomplete="new-password"
+                                placeholder="Masukan Password Baru"
+                                required
+                            >
+                            <button
+                                class="password-toggle"
+                                type="button"
+                                data-password-toggle="signup-password"
+                                aria-controls="signup-password"
+                                aria-label="Show password"
+                            >Show</button>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-row">
+                            <input 
+                                id="confirm-password"
+                                name="confirmPassword"
+                                type="password"
+                                autocomplete="new-password"
+                                placeholder="Masukan Ulang Password Anda"
+                                required
+                            >
+                            <button
+                                class="password-toggle"
+                                type="button"
+                                data-password-toggle="confirm-password"
+                                aria-controls="confirm-password"
+                                aria-label="Show password"
+                            >Show</button>
+                        </div>
+                    </div>
+
+                    <button class="submit-button" type="submit">Sign Up</button>
+                </form>
+
+
+                <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+                <p id="login-switch" class="switch-copy">Don't have an account?
+                <button class="text-button" type="button" data-mode="signup">Sign up</button>
+                </p>
+
+                <p id="signup-switch" class="switch-copy" hidden>Already have an account?
+                <button class="text-button" type="button" data-mode="login">Sign in</button>
+                </p>
+            </div>
+        </section>
+    </main>   
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
