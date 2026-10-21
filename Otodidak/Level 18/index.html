@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 18 - Operator Aritmetika</title>
+</head>
+<body>
+    <h1>Level 18: Operator Aritmetika</h1>
+
+    <label for="angka1">Angka pertama:</label>
+    <input type="number" id="angka1" value="25">
+
+    <br><br>
+
+    <label for="angka2">Angka kedua:</label>
+    <input type="number" id="angka2" value="4">
+
+    <br><br>
+
+    <button id="hitungButton">Hitung</button>
+
+    <h2>Hasil Perhitungan</h2>
+    <p id="hasil"></p>
+
+    <script>
+        const angka1 = document.getElementById("angka1");
+        const angka2 = document.getElementById("angka2");
+        const hitungButton = document.getElementById("hitungButton");
+        const hasil = document.getElementById("hasil");
+
+        hitungButton.addEventListener("click", function() {
+            let a = Number(angka1.value);
+            let b = Number(angka2.value);
+
+            hasil.textContent =
+                `Penjumlahan: ${a + b}
+                Pengurangan: ${a - b}
+                Perkalian: ${a * b}
+                Pembagian: ${a / b}
+                Sisa pembagian: ${a % b}
+                Pangkat: ${a ** b}`;
+        });
+    </script>
+</body>
+</html>

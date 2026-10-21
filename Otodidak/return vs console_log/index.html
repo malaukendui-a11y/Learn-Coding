@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Challenge - Function</title>
+</head>
+<body>
+    <h1>Boss Challenge</h1>
+
+    <button id="hitung">Jalankan</button>
+    <h2 id="hasil"></h2>
+
+    <script>
+        const tombol = document.getElementById("hitung");
+        const output = document.getElementById("hasil");
+
+        function hitungDiskon(harga) {
+            return harga * 0.10;
+        }
+
+        function hitungTotal(harga, diskon) {
+            return harga - diskon;
+        }
+
+        tombol.addEventListener("click", function () {
+            const hargaBarang = 200000;
+            const diskon = hitungDiskon(hargaBarang);
+            const total = hitungTotal(hargaBarang, diskon);
+
+            output.textContent = total;
+        });
+    </script>
+</body>
+</html>

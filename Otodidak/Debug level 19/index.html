@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Harga</title>
+</head>
+<body>
+    <h1>Kalkulator Diskon</h1>
+
+    <label for="harga">Harga barang:</label>
+    <input type="number" id="harga" value="600000">
+    <button id="hitung">Hitung</button>
+
+    <h2 id="hasil"></h2>
+
+    <script>
+        const inputHarga = document.getElementById("harga");
+        const tombol = document.getElementById("hitung");
+        const output = document.getElementById("hasil");
+
+        function hitungDiskon(harga) {
+            if (harga >= 500000) {
+                return harga * 0.20;
+            } else if (harga >= 200000) {
+                return harga * 0.10;
+            } else {
+                return 0;
+            }
+        }
+
+        function hitungTotal(harga, diskon) {
+            return harga - diskon;
+        }
+
+        tombol.addEventListener("click", function() {
+            const hargaBarang = Number("0");
+
+        console.log(hargaBarang);
+        console.log(Number.isNaN(hargaBarang));
+
+        // Angka tidak boleh negatif atau kosong
+        if (inputHarga.value.trim() === ""){
+            output.textContent = "Harus Diisi!";
+            return;
+        }
+        if (hargaBarang < 0){
+            output.textContent = "angka tidak boleh minus";
+            return;
+        }
+        if (hargaBarang === 0){
+            output.textContent = "angka tidak boleh 0";
+            return;
+        }
+        if (Number.isNaN(inputHarga)){
+            output.textContent = "tidak boleh berupa Huruf";
+            return;
+        }
+
+        // Perhitungan hanya berjalan jika input Valid
+            const diskon = hitungDiskon(hargaBarang);
+            const total = hitungTotal(hargaBarang, diskon);
+
+            output.textContent =
+                `Diskon: Rp${diskon.toLocaleString("id-ID")} | Total: Rp${total.toLocaleString("id-ID")}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Checker - Level 17</title>
+</head>
+<body>
+    <h1>Discount Checker</h1>
+    <p>Minimal belanja Rp100.000 untuk mendapatkan diskon 10%.</p>
+
+    <label for="inputBelanja">Masukkan total belanja:</label>
+    <input type="number" id="inputBelanja" placeholder="Contoh: 150000">
+
+    <button id="checkButton">Hitung Diskon</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        const inputBelanja = document.getElementById("inputBelanja");
+        const checkButton = document.getElementById("checkButton");
+        const hasil = document.getElementById("hasil");
+
+        checkButton.addEventListener("click", function() {
+            let belanja = Number(inputBelanja.value);
+            let diskon = 0;
+            let totalBayar = 0;
+
+            // Validasi input
+            if (inputBelanja.value.trim() === "") {
+                hasil.textContent = "Input tidak boleh kosong!";
+                return;
+            } else if (Number.isNaN(belanja)) {
+                hasil.textContent = "Input harus berupa angka!";
+                return;
+            } else if (belanja < 0) {
+                hasil.textContent = "Angka tidak boleh negatif!";
+                return;
+            }
+
+            // Hitung diskon
+            if (belanja >= 100000) {
+                diskon = belanja * 0.10;
+            }
+
+            // Hitung total pembayaran
+            totalBayar = belanja - diskon;
+
+            // Tampilkan hasil
+            if (diskon > 0) {
+                hasil.textContent =
+                    `Selamat! Anda mendapat diskon Rp${diskon.toLocaleString("id-ID")}. ` +
+                    `Total pembayaran: Rp${totalBayar.toLocaleString("id-ID")}`;
+            } else {
+                hasil.textContent =
+                    `Maaf, Anda belum mendapatkan diskon. ` +
+                    `Total pembayaran: Rp${totalBayar.toLocaleString("id-ID")}`;
+            }
+        });
+    </script>
+</body>
+</html>
