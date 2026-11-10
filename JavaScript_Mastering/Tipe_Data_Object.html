@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    
+<script>
+    const orang = {
+        "nama lengkap" : "Ananda Kenny Esqiel Bisaratua",
+        hobby : "Coding",
+        alamat : "Jakarta",
+        umur : 23 
+    };
+
+    // Menambah atau mengubah
+    // orang["nama"] = "Ananda Kenny";
+    // orang["alamat"] = "Jakarta";
+    // orang["umur"] = 23;
+
+    console.info(`Nama : ${orang["nama lengkap"]}`);
+    console.info(`hobby : ${orang.hobby}`);
+    console.info(`alamat : ${orang.alamat}`);
+    console.info(`umur : ${orang.umur}`);
+
+    console.table(orang);
+
+    delete orang["alamat"];
+    console.table(orang);
+
+
+
+</script>
+
+</body>
+</html>

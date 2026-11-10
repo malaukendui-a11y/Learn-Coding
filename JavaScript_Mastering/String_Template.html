@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    
+    <script>
+        const name = "Ananda Kenny Esqiel";
+        const template = `Name : ${name}`;
+
+        console.info(template);
+
+        // Expresion String Template
+        const nilai = 90;
+        const template2 = `Name : ${name}, lulus : ${nilai > 70}`;
+
+        console.info(template2);
+
+        const multiline = `Nama Saya Kenny, 
+Sekarang nganggur, 
+sering juga belajar kalo lagi ambis, 
+Intinya Asoy banget nih`;
+
+        document.writeln("<pre>");
+            document.writeln(multiline);
+        document.writeln("</pre>");
+    </script>
+</body>
+</html>
