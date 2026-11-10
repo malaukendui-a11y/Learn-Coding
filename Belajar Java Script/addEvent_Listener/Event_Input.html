@@ -27,13 +27,22 @@
         <p id="output-text"></p>
     </div>
     <script>
-        let inputText = document.getElementById("input-text");
-        let outputText = document.getElementById("output-text");
-
-        function tampilkanText() {
-            outputText.innerText = inputText.value; 
+        function cekSaldo(saldo){
+            if (Number.isNaN(saldo)){
+                console.log("Bukan Angka");
+                return;
+            } else if (saldo === 0){
+                console.log("Harga nol");
+                return;
+            } else if (saldo < 0){
+                console.log("Harga Minus");
+                return;
+            } else {
+                console.log("harga valid");
+            }
         }
-        inputText.addEventListener("input", tampilkanText);
+
+        cekSaldo(50000)
     </script>
 </body>
 
